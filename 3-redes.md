@@ -10,23 +10,23 @@ Las redes son un componente fundamental que permite la comunicación entre conte
 ### Crear una red de tipo bridge
 
 ```
-docker network create <nombre red> -d bridge
+docker network create <nombre red> -d bridge: docker run -d -name web-container --network redBdridge nginx
 ```
 
 ### Crear un contenedor vinculado a una red
 
 ```
-docker run -d --name <nombre contenedor> --network <nombre red> <nombre imagen>
+docker run -d --name <nombre contenedor> --network <nombre red> <nombre imagen>: docker run -d --name web-container --network redBdridge nginx
 ```
 
 ### Para saber a qué red está conectado un contenedor
 
 ```
-docker inspect <nombre contenedor>
+docker inspect <nombre contenedor>: docker : 
 ```
 ó
 ```
-docker network inspect <nombre red> 
+docker network inspect <nombre red>: network inspect redBdridge 
 ```
 
 ### Vincular contenedor a una red
@@ -36,7 +36,7 @@ docker network connect <nombre red> <nombre contenedor>
 
 ### Para desvincular un contenedor de una red
 ```
-docker network disconnect <nombre red> <nombre contenedor>
+docker network disconnect <nombre red> <nombre contenedor>: docker network disconnect redBdridge web-container
 ```
 
 ### Para listar las redes existentes
