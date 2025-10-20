@@ -26,6 +26,7 @@ recordar que a es el puerto que usó para el mapeo con wordpress
 
 ### Eliminar el contenedor wordpress
 # COMPLETAR
+docker stop wordpress, docker rm wordpress
 
 ### Crear nuevamente el contenedor wordpress
 Ingresar a: http://localhost:9300/ 
